@@ -1,18 +1,18 @@
 # mileapp BACKEND DEVELOPER TEST
 
-##Installation
+## Installation
 ```bash
 cd untitled
 pip install -r requirements.txt 
 ```
-##Create Database
+## Create Database
 ```bash
 sudo -u postgres psql
 CREATE DATABASE mileapp;
 CREATE USER mileapp with encrypted password 'mileapp123';
 GRANT ALL PRIVILEGES ON DATABASE mileapp to mileapp;
 ```
-##Run Django server
+## Run Django server
 if you don't have Virtual Environment, please install it first.
 To activate virtual environment:
 ```bash
@@ -22,14 +22,14 @@ source venv/bin/activate
 ```
 Then the server will run.
 
-##CRUD
+## CRUD
 Follow this link
 ```bash
 http://localhost:8000/api/package
 http://localhost:8000/api/package/:uri
 ```
 
-##CRUD SAMPLE
+## CRUD SAMPLE
 I recommend to try with Postman <br/><br/>
 To get all data: <br/>
 METHOD: GET<br/>
@@ -59,17 +59,17 @@ body: <br/>
 
 
 
-##SQL to mock data
+## SQL to mock data
 Just run it on your dbms tool
 https://pastebin.pl/view/c68921f8
 
-#Unit Test
+# Unit Test
 
-##Installation
+## Installation
 ```bash
 cd rest-api-test
 npm-install
 ```
 
-##Usage
+## Usage
 Open the ```api-test.js```, adjust the ```order id``` variable then open your terminal and type ```mocha api-test.js --timeout 100000```
