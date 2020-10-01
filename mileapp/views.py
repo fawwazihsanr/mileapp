@@ -38,7 +38,7 @@ def get_package_details(request, pk):
             get_detail = Mileapp.objects.filter(pk=pk).values()
             for data in get_detail:
                 data_return.append(data)
-            return Response(data=data_return, status=status.HTTP_200_OK)
+            return Response(data={"data": data_return}, status=status.HTTP_200_OK)
         except Mileapp.DoesNotExist:
             return Response(data={"message": "data not found"}, status=status.HTTP_404_NOT_FOUND)
     elif request.method == 'DELETE':
